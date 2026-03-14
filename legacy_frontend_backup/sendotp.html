@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-low": "#f2f4f6",
+                        "inverse-primary": "#adc6ff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary-fixed-variant": "#304671",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "secondary-fixed-dim": "#b1c6f9",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-container": "#eceef0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#495e8a",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#001a42",
+                        "on-primary-fixed-variant": "#004395",
+                        "background": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "on-primary-container": "#fefcff",
+                        "on-primary-fixed": "#001a42",
+                        "on-secondary-container": "#405682",
+                        "outline-variant": "#c2c6d6",
+                        "surface-dim": "#d8dadc",
+                        "on-surface-variant": "#424754",
+                        "surface": "#f7f9fb",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "tertiary-container": "#b75b00",
+                        "surface-tint": "#005ac2",
+                        "primary-container": "#2170e4",
+                        "surface-container-high": "#e6e8ea",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "tertiary": "#924700",
+                        "primary": "#0058be",
+                        "inverse-surface": "#2d3133",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#b6ccff",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-bright": "#f7f9fb",
+                        "outline": "#727785",
+                        "on-surface": "#191c1e",
+                        "on-tertiary-fixed": "#311400"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #0058be 0%, #2170e4 100%);
+        }
+        .ambient-shadow {
+            box-shadow: 0px 4px 20px rgba(25, 28, 30, 0.04), 0px 12px 40px rgba(25, 28, 30, 0.08);
+        }
+    </style>
+</head>
+<body class="text-on-background flex flex-col min-h-screen">
+<!-- Top Navigation (Shell component rendered as per JSON but without nav links for focus) -->
+<nav class="glass-nav fixed top-0 w-full z-50 flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 primary-gradient rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">link</span>
+</div>
+<span class="font-headline font-bold text-xl tracking-tight text-on-background">LinkTrack</span>
+</div>
+<div>
+<button class="bg-surface-container-high text-on-surface font-medium px-5 py-2 rounded-xl text-sm transition-all hover:opacity-90">
+                Enter Code
+            </button>
+</div>
+</nav>
+<!-- Main Content (Linear Process Flow) -->
+<main class="flex-grow flex items-center justify-center px-4 pt-20 pb-12">
+<div class="w-full max-w-[440px] animate-in fade-in slide-in-from-bottom-4 duration-700">
+<!-- Login Card -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-10 ambient-shadow relative overflow-hidden">
+<!-- Background Accent -->
+<div class="absolute -top-24 -right-24 w-48 h-48 bg-primary opacity-[0.03] blur-3xl rounded-full"></div>
+<!-- Card Header -->
+<div class="text-center mb-10">
+<h1 class="text-on-background font-headline text-[2rem] font-bold tracking-tight mb-2">Sign In</h1>
+<p class="text-on-surface-variant text-body-md">Access your analytics dashboard</p>
+</div>
+<!-- Form Section -->
+<form class="space-y-6">
+<div class="space-y-2 mb-6">
+<label class="text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant ml-1" for="full-name">Full Name</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-none rounded-xl px-5 py-4 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-300" id="full-name" placeholder="Your full name" type="text"/>
+<div class="absolute inset-y-0 right-4 flex items-center pointer-events-none opacity-0 group-focus-within:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-xl">person</span>
+</div>
+</div>
+</div><div class="space-y-2">
+<label class="text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant ml-1" for="email">Email address</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-none rounded-xl px-5 py-4 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-300" id="email" placeholder="name@company.com" type="email"/>
+<div class="absolute inset-y-0 right-4 flex items-center pointer-events-none opacity-0 group-focus-within:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-xl">alternate_email</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-xs mt-3 ml-1 flex items-start gap-2">
+<span class="material-symbols-outlined text-sm mt-0.5">info</span>
+                            We'll send a 6-digit verification code to your email.
+                        </p>
+</div>
+<!-- Button State: Loading Example -->
+<div class="pt-4">
+<button class="w-full primary-gradient text-white font-semibold py-4 rounded-xl ambient-shadow transition-transform hover:scale-[1.01] active:scale-[0.98] flex items-center justify-center gap-3" type="submit">
+<span>Send OTP</span>
+<span class="material-symbols-outlined text-white text-xl">arrow_forward</span>
+</button>
+</div>
+<!-- Alternate Loading State (Hidden by default, used for designer visualization) -->
+<!-- 
+                    <button disabled class="w-full bg-surface-container-highest text-outline font-semibold py-4 rounded-xl flex items-center justify-center gap-3 cursor-not-allowed">
+                        <svg class="animate-spin h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span>Requesting...</span>
+                    </button> 
+                    -->
+</form>
+<!-- Divider -->
+<!-- Secondary Actions -->
+</div>
+<!-- Footer-style helper links for login page -->
+<div class="mt-8 text-center flex flex-col gap-4">
+<p class="text-on-surface-variant text-sm">
+                    Don't have an account? 
+                    <a class="text-primary font-semibold hover:underline" href="#">Create one for free</a>
+</p>
+<div class="flex items-center justify-center gap-6 opacity-60">
+<a class="text-xs font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-xs font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Bottom Bar for Legal (Shell Component - Footer variant) -->
+<footer class="py-8 px-6 text-center">
+<p class="text-on-surface-variant text-[11px] font-medium opacity-50 uppercase tracking-[0.1em]">
+            © 2024 LinkTrack Inc. All rights reserved.
+        </p>
+</footer>
+</body></html>

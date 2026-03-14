@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-low": "#f2f4f6",
+                        "inverse-primary": "#adc6ff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary-fixed-variant": "#304671",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "secondary-fixed-dim": "#b1c6f9",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-container": "#eceef0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#495e8a",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#001a42",
+                        "on-primary-fixed-variant": "#004395",
+                        "background": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "on-primary-container": "#fefcff",
+                        "on-primary-fixed": "#001a42",
+                        "on-secondary-container": "#405682",
+                        "outline-variant": "#c2c6d6",
+                        "surface-dim": "#d8dadc",
+                        "on-surface-variant": "#424754",
+                        "surface": "#f7f9fb",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "tertiary-container": "#b75b00",
+                        "surface-tint": "#005ac2",
+                        "primary-container": "#2170e4",
+                        "surface-container-high": "#e6e8ea",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "tertiary": "#924700",
+                        "primary": "#0058be",
+                        "inverse-surface": "#2d3133",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#b6ccff",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-bright": "#f7f9fb",
+                        "outline": "#727785",
+                        "on-surface": "#191c1e",
+                        "on-tertiary-fixed": "#311400"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0058be 0%, #2170e4 100%);
+        }
+        .metric-glow {
+            background: radial-gradient(circle at top right, rgba(0, 88, 190, 0.08), transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="glass-nav sticky top-0 z-50 px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-primary">LinkTrack</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary" href="#">Features</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary" href="#">How It Works</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary" href="#">Pricing</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 text-sm font-semibold rounded-xl bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors">Enter Code</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="Close up professional portrait of a user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUm3N0PE8iWatLG-uGyFsCR80Gg8h7y7wwU-WbEBgbH3Ohb1rXTqIC-MfE7wrkdnKYXhuvenGx_mrn8n-KyuyIbHrLyfyB61sexg9iL_eF02UMoc6iNDaLI7G3Al5L-f7cVLzZlKH2_aNVMv8Gucj5iQeVPY2y26AYalnO9RoOOQ7nno7TgJPATpMEYv0Y7fEMPnS2NypcZ5VNDIXS-OpDxmZKTpQWWMw5GD-UyUAWIPb_FcqIBOY05M8GH58hQ8vHU3DFNEBT5ec"/>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative px-6 pt-20 pb-32 max-w-7xl mx-auto overflow-hidden">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-8">
+<h1 class="text-6xl md:text-7xl font-bold leading-[1.1] tracking-tight text-on-surface">
+                        Real-Time Location Sharing. <span class="text-primary">Simplified.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                        Securely share your live location with a single code. Fast. Private. Temporary.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="hero-gradient px-8 py-4 text-on-primary font-bold rounded-xl shadow-lg hover:shadow-xl transition-all">Start Sharing</button>
+<button class="px-8 py-4 bg-surface-container-high text-on-surface font-bold rounded-xl hover:bg-surface-container-highest transition-all">Enter Code</button>
+</div>
+</div>
+<!-- Mockup Glass Card -->
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/5 rounded-3xl blur-3xl"></div>
+<div class="relative bg-surface-container-lowest rounded-[2rem] p-4 shadow-2xl shadow-on-surface/5 border border-white/40">
+<div class="rounded-2xl overflow-hidden aspect-[4/3] bg-surface-container relative">
+<!-- Map Representation -->
+<img class="w-full h-full object-cover opacity-80" data-alt="Minimalist light colored digital map interface with a route line" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3tIipQjJo-Y9_H4BQRhTUOc2CdKcaa8v1X6dxyaZZOgMW3gwKVupAHiJgAbUTPY0sSeDleUWj2yvm9f0bVx5cqP7GiKBiKlFnxP5CxfHLOZmhQLuRksv3RalZNWHMXsQKw0V8KjpmhDnfVi7q_rBQO2_Xema-Nq5I2KUBRUSaxAC6M3Go5yQm_5hngHEuQZQ74sfhMAKI4oIl-k8kP-Jatvn1xIg9ClbQiHBRnPhQoyC_POtzEM2tQEs07ZStLVlt0CR4oXaCyjU"/>
+<!-- UI Overlay -->
+<div class="absolute top-4 left-4 right-4 flex justify-between items-start">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md p-3 rounded-2xl shadow-sm flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Live Tracking</span>
+</div>
+<div class="bg-surface-container-lowest/90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-sm">
+<span class="text-sm font-bold text-primary">ETA: 12 min</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md p-4 rounded-2xl shadow-lg flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">directions_car</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Session Code</p>
+<p class="text-lg font-bold tracking-widest">LX-9921</p>
+</div>
+<div class="ml-auto flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a female user profile icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf5LH_GLIkAMALKdDbH8bUpA0BgKCXKBpYUQj3jCom7PiJaDJsp7cVTE7xfetfPUGaz-Joh-hvVbs5__I4UZq6s_UF7QDx9o4V1Ptgs2cDERhmHo14-a9tZRnzp6Q1cONBmKrhnP-S49ezbOQuxdpO5hGqAcMqcJEJLpDPWblQNsWDBnZx9CCpL9fTRmrUkAxZJHaQZ4_Z0ayf89FUu-4kfvchKUXZoAijupGtdCi55h-_CDmsRGqGFgHUFYa1BR8EWplB0Vhrkqk"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary flex items-center justify-center text-[10px] text-white font-bold">
+                                        +1
+                                    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="px-6 py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-3xl font-bold tracking-tight">Powerful simplicity.</h2>
+<p class="text-on-surface-variant mt-2">Engineered for speed, built for privacy.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-[2rem] p-10 metric-glow relative overflow-hidden group">
+<div class="flex flex-col h-full justify-between gap-12">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-3">Instant Code Connection</h3>
+<p class="text-on-surface-variant max-w-md leading-relaxed">No sign-ups or phone numbers. Just a 6-digit code to connect instantly. Secure peer-to-peer location sharing that stays active only as long as you need it.</p>
+</div>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-10 flex flex-col justify-between group">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-3xl">route</span>
+</div>
+<div class="mt-12">
+<h3 class="text-2xl font-bold mb-3">Live Route &amp; ETA</h3>
+<p class="text-on-surface-variant leading-relaxed">Real-time updates with turn-by-turn logic. See exactly where they are and when they'll arrive.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-10 flex flex-col justify-between md:mt-0 group">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-3xl">lock</span>
+</div>
+<div class="mt-12">
+<h3 class="text-2xl font-bold mb-3">Secure &amp; Temporary</h3>
+<p class="text-on-surface-variant leading-relaxed">Sessions automatically expire. Your data is never stored on our servers once the link closes.</p>
+</div>
+</div>
+<!-- Metric Glass -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-[2rem] p-10 flex flex-col md:flex-row items-center gap-12 overflow-hidden border border-white/50 shadow-sm">
+<div class="flex-1">
+<h3 class="text-2xl font-bold mb-4">Unmatched Precision</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Using advanced telemetry, LinkTrack provides sub-meter accuracy even in dense urban environments.</p>
+<div class="flex gap-4">
+<div class="px-4 py-2 rounded-full bg-surface-container-high text-xs font-bold tracking-wider text-on-surface-variant uppercase">End-to-End Encrypted</div>
+<div class="px-4 py-2 rounded-full bg-surface-container-high text-xs font-bold tracking-wider text-on-surface-variant uppercase">Auto-Expire</div>
+</div>
+</div>
+<div class="flex-none text-center md:text-right">
+<span class="text-7xl font-bold text-primary tracking-tighter">0.5m</span>
+<p class="text-sm font-semibold text-primary mt-2 uppercase tracking-widest">Accuracy Radius</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="px-6 py-32 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center text-center mb-24">
+<h2 class="text-4xl font-bold tracking-tight">How It Works</h2>
+<div class="w-20 h-1 bg-primary rounded-full mt-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
+<!-- Steps -->
+<div class="flex flex-col items-center text-center gap-6">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest shadow-xl flex items-center justify-center text-2xl font-bold text-primary relative z-10 border border-white">1</div>
+<h4 class="text-xl font-bold">Generate a code</h4>
+<p class="text-on-surface-variant">Click start and get a unique 6-digit session code instantly.</p>
+</div>
+<div class="flex flex-col items-center text-center gap-6">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest shadow-xl flex items-center justify-center text-2xl font-bold text-primary relative z-10 border border-white">2</div>
+<h4 class="text-xl font-bold">Share it instantly</h4>
+<p class="text-on-surface-variant">Send the code or a quick link to whoever needs to follow you.</p>
+</div>
+<div class="flex flex-col items-center text-center gap-6">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest shadow-xl flex items-center justify-center text-2xl font-bold text-primary relative z-10 border border-white">3</div>
+<h4 class="text-xl font-bold">Track live distance</h4>
+<p class="text-on-surface-variant">Watch progress in real-time. Link ends when you reach your goal.</p>
+</div>
+<!-- Connecting Line -->
+<div class="hidden md:block absolute top-8 left-1/4 right-1/4 h-px bg-outline-variant/30 -z-0"></div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 py-24">
+<div class="max-w-5xl mx-auto hero-gradient rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold text-on-primary mb-8">Ready to share your way?</h2>
+<p class="text-on-primary/80 text-lg mb-12 max-w-xl mx-auto">Join thousands who use LinkTrack for safer commutes and easier meetups.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-10 py-5 bg-on-primary text-primary font-bold rounded-2xl hover:bg-surface-bright transition-all shadow-xl">Get Started Now</button>
+<button class="px-10 py-5 bg-white/10 backdrop-blur-md text-on-primary border border-white/20 font-bold rounded-2xl hover:bg-white/20 transition-all">Watch Demo</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low px-6 py-16 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="text-2xl font-bold tracking-tight text-on-surface">LinkTrack</span>
+<p class="text-sm text-on-surface-variant">© 2024 LinkTrack Inc. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary" href="#">Terms of Service</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary" href="#">Contact Support</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
